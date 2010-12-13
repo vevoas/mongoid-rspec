@@ -83,10 +83,9 @@ module Mongoid
       end
     end
 
-    def save(attributes = {})
+    def save_properly(attributes = {})
       SaveMatcher.new(attributes)
     end
-    alias_method :save_properly, :save
 
   end
 end
